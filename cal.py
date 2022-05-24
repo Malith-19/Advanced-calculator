@@ -41,7 +41,7 @@ def execute(operation, num1=None, num2=None):
             print("Not a valid number. Please enter again.")
             execute(operation, num1)
     
-    answer = None
+    answer = None #this will collect the answer by doing operation
 
     if operation == "+":
         answer =num1 + num2
@@ -56,7 +56,7 @@ def execute(operation, num1=None, num2=None):
         try:
             print(num1,operation,num2,"=",num1 / num2)
         except(ZeroDivisionError):
-            print("float division by zero")
+            print("float division by zero") #printing error
 
     elif operation == "^":
         answer = num1 ** num2
@@ -64,7 +64,7 @@ def execute(operation, num1=None, num2=None):
     elif operation == "%":
         answer = num1 % num2
 
-    print(num1,operation,num2,"=",answer)
+    print(num1,operation,num2,"=",answer) #printing the answer
     return
 
 
@@ -81,7 +81,7 @@ while True:
 
     # take input from the user
     choice = input("Enter choice(+,-,*,/,^,%,#,$): ")
-    print(choice)
+    
     if select_op(choice) == -1:
         # program ends here
         print("Done. Terminating")
