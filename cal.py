@@ -40,28 +40,31 @@ def execute(operation, num1=None, num2=None):
         else:
             print("Not a valid number. Please enter again.")
             execute(operation, num1)
+    
+    answer = None
 
     if operation == "+":
-        print(num1 + num2)
+        answer =num1 + num2
 
     elif operation == "-":
-        print(num1 - num2)
+        answer = num1 - num2
 
     elif operation == "*":
-        print(num1 * num2)
+        answer = num1 * num2
 
     elif operation == "/":
         try:
-            print(num1 / num2)
+            print(num1,operation,num2,"=",num1 / num2)
         except(ZeroDivisionError):
-            print("Devision by zero")
+            print("float division by zero")
 
     elif operation == "^":
-        print(num1 ** num2)
+        answer = num1 ** num2
 
     elif operation == "%":
-        print(num1 % num2)
+        answer = num1 % num2
 
+    print(num1,operation,num2,"=",answer)
     return
 
 
